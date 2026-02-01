@@ -1,0 +1,144 @@
+/* Hero Image Animation Styles */
+@keyframes heroFloat {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) scale(1.02);
+    }
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.prt_home_wrapper {
+    position: relative;
+    animation: heroFadeIn 1.5s ease-out;
+    background-image: none !important;
+}
+
+.prt_home_wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../images/content/banner_bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: heroFloat 6s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* Portfolio Category Boxes */
+.portfolio-categories {
+    display: inline-block;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-box {
+    background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
+    border-radius: 12px;
+    padding: 50px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    display: block;
+}
+
+.category-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(246, 72, 59, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.category-box:hover::before {
+    left: 100%;
+}
+
+.category-box:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(246, 72, 59, 0.4);
+    border-color: #f6483b;
+}
+
+.category-box h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.category-box:hover h3 {
+    color: #f6483b;
+    transform: scale(1.05);
+}
+
+.category-box::after {
+    content: "→";
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    font-size: 24px;
+    color: #f6483b;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.category-box:hover::after {
+    opacity: 1;
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .category-box {
+        padding: 40px 20px;
+    }
+    
+    .portfolio-categories {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-box h3 {
+        font-size: 18px;
+    }
+}

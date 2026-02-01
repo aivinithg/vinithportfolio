@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Print Designs - Vinith Portfolio</title>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="shortcut icon" type="image/png" href="images/header/favicon.png">
+<style>
+.gallery-page {
+    min-height: 100vh;
+    background-color: #010101;
+    padding: 100px 0 80px;
+}
+.gallery-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.gallery-header h1 {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.gallery-header p {
+    color: #b7b7b7;
+    font-size: 18px;
+}
+.back-link {
+    display: inline-block;
+    color: #f6483b;
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.back-link:hover {
+    color: #ffffff;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #111111;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(246, 72, 59, 0.3);
+}
+.gallery-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+.gallery-item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+.gallery-item:hover .gallery-item-overlay {
+    transform: translateY(0);
+}
+.gallery-item-overlay h4 {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0;
+}
+</style>
+</head>
+<body>
+<div class="gallery-page">
+    <div class="container">
+        <a href="index.html#portfolio" class="back-link">← Back to Portfolio</a>
+        <div class="gallery-header">
+            <h1>Print Designs</h1>
+            <p>Professional print media and branding materials</p>
+        </div>
+        <!-- Print Designs Video Banner -->
+        <div class="video-banner">
+            <video autoplay loop muted playsinline class="banner-video">
+                <source src="images/content/Images/Printing/Untitled design.mp4" type="video/mp4">
+                Your browser doesn't support video.
+            </video>
+        </div>
+
+        <div class="gallery-grid">
+            <a href="images/content/Images/Printing/Brochure.jpg" class="gallery-item popup-gallery" title="Title">
+                <img src="images/content/Images/Printing/Brochure.jpg" alt="Project">
+                <div class="gallery-item-overlay">
+                    <h4></h4>
+                </div>
+            </a>
+            <a href="images/content/Images/Printing/Product-Machzine.png" class="gallery-item popup-gallery" title="Title">
+                <img src="images/content/Images/Printing/Product-Machzine.png" alt="Project">
+                <div class="gallery-item-overlay">
+                    <h4></h4>
+                </div>
+            </a>
+            <a href="images/content/Images/Printing/Report Design.png" class="gallery-item popup-gallery" title="Title">
+                <img src="images/content/Images/Printing/Report Design.png" alt="Project">
+                <div class="gallery-item-overlay">
+                    <h4></h4>
+                </div>
+            </a>
+            <a href="images/content/Images/Printing/Mockup-5.jpg" class="gallery-item popup-gallery" title="Title">
+                <img src="images/content/Images/Printing/Mockup-5.jpg" alt="Project">
+                <div class="gallery-item-overlay">
+                    <h4></h4>
+                </div>
+            </a>
+            <a href="images/content/Images/Printing/Mockup-6.jpg" class="gallery-item popup-gallery" title="Title">
+                <img src="images/content/Images/Printing/Mockup-6.jpg" alt="Project">
+                <div class="gallery-item-overlay">
+                    <h4></h4>
+                </div>
+            </a>
+            <a href="images/content/Images/Printing/box.jpg" class="gallery-item popup-gallery" title="Title">
+                <img src="images/content/Images/Printing/box-T.jpg" alt="Project">
+                <div class="gallery-item-overlay">
+                    <h4></h4>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.popup-gallery').magnificPopup({
+    type:'image',
+    gallery:{enabled:true},
+    image:{
+      titleSrc:function(item){
+        return item.el.attr('title');
+      }
+    },
+    mainClass:'mfp-fade',
+    fixedContentPos:true,
+    closeOnContentClick:true,
+    closeOnBgClick:true,
+    preloader:true,
+    tLoading:'Loading image...'
+  });
+});
+</script>
+
+</body>
+</html>

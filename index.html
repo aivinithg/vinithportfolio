@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Portfolio Responsive HTML Template
+Version: 1.0.8
+Author: Kamleshyadav
+Website: http://himanshusofttech.com/
+Purchase: http://themeforest.net/user/kamleshyadav
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]>-->
+<html lang="en"><!--<![endif]-->
+<!-- Begin Head -->
+<head>
+<title>Vinith Portfolio</title>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Portfolio">
+<meta name="keywords" content="Creative, minimal, Portfolio, cv, business, Resume, Information, personal portfolio, Professional">
+<meta name="author" content="hsoft" >
+<meta name="MobileOptimized" content="320">
+<!--Srart Style -->
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/fonts.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- Favicon Link -->
+<link rel="shortcut icon" type="image/png" href="images/header/favicon.png">
+<style>
+/* Hero Image Animation */
+@keyframes heroFloat {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) scale(1.02);
+    }
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.prt_home_wrapper {
+    animation: heroFadeIn 1.5s ease-out;
+}
+
+.prt_home_wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(images/content/banner_bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: heroFloat 6s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* Portfolio Category Boxes */
+.portfolio-categories {
+    display: inline-block;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-box {
+    background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
+    border-radius: 12px;
+    padding: 50px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.category-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(246, 72, 59, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.category-box:hover::before {
+    left: 100%;
+}
+
+.category-box:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(246, 72, 59, 0.4);
+    border-color: #f6483b;
+}
+
+.category-box h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.category-box:hover h3 {
+    color: #f6483b;
+    transform: scale(1.05);
+}
+
+.category-box::after {
+    content: "→";
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    font-size: 24px;
+    color: #f6483b;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.category-box:hover::after {
+    opacity: 1;
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .category-box {
+        padding: 40px 20px;
+    }
+}
+</style>
+</head>
+<body>
+<!--Preloader Start-->
+<div id="preloader" aria-hidden="true">
+    <div id="status">Loading...</div>
+  </div>
+</div>
+<!--Main Wrapper Start-->
+<div class="prt_main_wrapper">
+	<div class="prt_home_wrapper">
+		<div class="prt_logo_wrapper">
+			<a><img src="images/header/logo.png" alt="Logo" id="prt_close_tab"></a>
+		</div>
+		<div class="prt_menu_wrapper">
+			<a href="#about" class="prt_top">about</a>
+			<a href="#contact" class="prt_right">contact</a>
+			<a href="#services" class="prt_bottom">strength</a>
+			<a href="#portfolio" class="prt_left">portfolio</a>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-5 offset-md-5 col-sm-10 offset-sm-2 col-xs-12 offset-xs-0">
+					<div class="typed-strings">
+						<h1>Hello.</h1>
+						<h1>I'm Vinith.</h1>
+						<h1>Creative Designer</h1>
+						<h1>UI/UX Designer</h1>
+						<h1>Social Media Strategist</h1>
+
+					</div>
+					<h1 class="typed"></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--About Wrapper Start-->
+	<div class="prt_about_wrapper ">
+		<div class="prt_close_wrapper">
+			<img src="images/header/down_arrow.png" alt="Close" class="prt_close">
+		</div>
+		<div class="container">
+			<div class="prt_about_info ">
+				<div class="row">				
+					<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+						<div class="prt_about_img">
+							<img src="images/content/about.jpg" alt="About">
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+						<div class="prt_heading_wrapper_2">
+							<div class="prt_heading ">
+								<h1>About ME</h1>
+								<div class="typed-strings">
+									<p>WHo AM i</p>
+									<p>Know more</p>
+								</div>
+								<p class="typed"></p>
+							</div>
+						</div>
+						<div class="prt_about_details">
+							<p>I have a passion for playing with colors and shapes, striving to create designs that are not only visually captivating but also clear and easy to understand. For me, design is a source of joy and personal fulfillment. Throughout my creative journey, I have learned that no design is ever truly complete, and this constant pursuit of perfection drives me to push boundaries and continually refine my work. I excel at deeply understanding the vision and needs of clients, team leads, and stakeholders, skillfully blending their requirements with my unique creative insights. Collaboration is key to my process; I value and incorporate feedback from my creative team to elevate projects to their highest potential. Proficient across all major creative software, I distinguish myself by balancing technical expertise with a collaborative spirit, always aiming to deliver innovative and impactful design solutions.</p>
+							<a href="images/content/banner_bg.jpg" class="prt_btn" target="_blank" rel="noopener noreferrer">Download Resume</a>
+						</div>
+					</div>
+				</div>
+				<div class="prt_about_edulearn_wrapper prt_about_edulearn_wrapper_115 ">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="prt_heading_wrapper">
+							<div class="prt_heading">
+								<h1>EDucation</h1>
+								<div class="typed-strings">
+									<p>learning</p>
+									<p>Reading</p>
+								</div>
+								<p class="typed"></p>
+							</div>
+						</div>
+						<div class="prt_about_learnsection">
+							<div class="row">
+								<div class="col-xl-6 offset-xl-6 col-md-12 offset-md-12 col-sm-12 col-xs-12">
+									<div class="prt_about_learnbox_right">
+										<div class="prt_about_learnbox_year">
+											<h1>2020</h1>
+										</div>
+										<div class="prt_about_learnbox_info">
+											<h4>Bachelors of Fine Arts (Photography)</h4>
+											<span>India</span>
+											<p>Advanced photo editing, retouching, color grading; Adobe Photoshop, Lightroom, Illustrator.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+									<div class="prt_about_learnbox_left">
+										<div class="prt_about_learnbox_year">
+											<h1>2025</h1>
+										</div>
+										<div class="prt_about_learnbox_info">
+											<h4>MSc Design and development of digital business</h4>
+											<span>Cork, Ireland</span>
+											<p>Focused on UI/UX design, service design, basic coding, and design problem‑solving using agile, design‑thinking projects.</p>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="prt_about_experience_wrapper ">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="prt_heading_wrapper">
+							<div class="prt_heading">
+								<h1>Experience</h1>
+								<div class="typed-strings">
+									<p>involvement</p>
+									<p>participation</p>
+								</div>
+								<p class="typed"></p>
+							</div>
+						</div>
+						<div class="prt_about_experience">
+							<div class="row">
+								<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+									<div class="prt_about_experiencebox">
+										<div class="prt_about_experience_year">
+											<h1>2020</h1>
+											<h4>January to 2021 February</h4>
+										</div>
+										<div class="prt_about_experience_info">
+											<h4>Photographer and Editor</h4>
+											<span>Caseon (Mivi)</span>
+											<p>Product photography, editing, web banners, and social media posters for e-commerce excellence.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+									<div class="prt_about_experiencebox">
+										<div class="prt_about_experience_year">
+											<h1>2021</h1>
+											<h4>March to 2023 February</h4>
+										</div>
+										<div class="prt_about_experience_info">
+											<h4>Graphic Designer</h4>
+											<span>InfoTec</span>
+											<p>Created graphics, print designs, and UI pages for US-based medical clients.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+									<div class="prt_about_experiencebox">
+										<div class="prt_about_experience_year">
+											<h1>2023</h1>
+											<h4>March to 2024 July</h4>
+										</div>
+										<div class="prt_about_experience_info">
+											<h4>Senior Creative Designer</h4>
+											<span>Anaisol Business consultants</span>
+											<p>Specialized in video editing, creative reels, YouTube videos, and engaging social posts.</p>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="prt_profile_info">
+					<div class="row">
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+							<div class="prt_profile_slider">
+								<div class="owl-carousel owl-theme">
+									<div class="item">
+										<i class="fa fa-behance pl_clr1" aria-hidden="true"></i>
+										<h4>Behance</h4>
+									</div>
+									<div class="item">
+										<i class="fa fa-linkedin pl_clr2" aria-hidden="true"></i>
+										<h4>LinkedIn</h4>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+							<div class="prt_heading_wrapper_2">
+								<div class="prt_heading">
+									<h1>PROFILE</h1>
+									<div class="typed-strings">
+										<p>WOrks At</p>
+										<p>effort at</p>
+									</div>
+									<p class="typed"></p>
+								</div>
+							</div>
+							<div class="prt_profile_details">
+								<p>Creative designer skilled in graphic design, UI/UX, video editing, and print. Experienced in product photography, digital content, and team collaboration. Proficient in major design software, delivering clear, engaging, and innovative visual solutions that meet client goals. </p>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+		
+	</div>
+<!--Contact Wrapper Start-->
+	<div class="prt_contact_wrapper ">
+		<div class="prt_close_wrapper">
+			<img src="images/header/right_arrow.png" alt="Close" class="prt_close">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="prt_heading_wrapper">
+						<div class="prt_heading">
+							<h1>get in touch</h1>
+							<div class="typed-strings">
+								<p>contact me</p>
+								<p>message me</p>
+							</div>
+							<p class="typed"></p>
+						</div>
+					</div>
+				</div>		
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+					<div class="prt_contact_map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d157563.23418782832!2d-8.66164015422061!3d51.898823039752486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4844900891beb961%3A0xa00c7a99731c5d0!2sCork!5e0!3m2!1sen!2sie!4v1758176472673!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>				
+				<div class="prt_contact_details">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+							<div class="prt_contact_details_box details_box1">
+								<h4>Phone</h4>
+								<p>+353 870370277</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+							<div class="prt_contact_details_box details_box2">
+								<h4>Email</h4>
+								<p><a href="#"><span class="__cf_email__" data-cfemail="f5839c9b9c819d92c3c3c3b59298949c99db969a98">[email&#160;protected]</span></a></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+							<div class="prt_contact_details_box details_box3">
+								<h4>Address</h4>
+								<p>Cork</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--Services Wrapper Start-->
+	<div class="prt_services_wrapper ">
+		<div class="prt_close_wrapper">
+			<img src="images/header/up_arrow.png" alt="Close" class="prt_close">
+		</div>
+		<div class="prt_services_slider_wrapper ">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="prt_heading_wrapper">
+							<div class="prt_heading">
+								<h1>What I do</h1>
+								<div class="typed-strings">
+									<p>take a look</p>
+									<p>have a look</p>
+								</div>
+								<p class="typed"></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+						<div class="prt_services_slider_imgs">
+							<img class="img_1 active" src="images/content/serv1.jpg" alt="Service">
+							<img class="img_2" src="images/content/serv2.jpg" alt="Service">
+							<img class="img_3" src="images/content/serv3.jpg" alt="Service">
+							<img class="img_4" src="images/content/serv4.jpg" alt="Service">
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<div class="row row_service_space">
+							<div class="col-lg-6 col-md-12">
+								<div class="prt_services_slider_text prt_img_click" id="1">
+									<img src="images/content/serv_icon1.png" alt="Service icon">
+									<h4>Graphic Design</h4>
+									<p>Creates captivating visuals using color theory, branding, and design software.</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-12">
+								<div class="prt_services_slider_text prt_img_click" id="2">
+									<img src="images/content/serv_icon2.png" alt="Service icon">
+									<h4>UI / UX</h4>
+									<p>Designs engaging digital experiences through research, wireframes, and usability testing.</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-12">
+								<div class="prt_services_slider_text prt_img_click" id="3">
+									<img src="images/content/serv_icon3.png" alt="Service icon">
+									<h4>Video Editing</h4>
+									<p>Crafts compelling stories by editing footage, color grading, and transitions.</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-12">
+								<div class="prt_services_slider_text prt_img_click" id="4">
+									<img src="images/content/serv_icon4.png" alt="Service icon">
+									<h4>Print Design</h4>
+									<p>Develops print-ready layouts, collaborating for accuracy, brand consistency, and high-impact materials.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="prt_skills_wrapper  ">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="prt_heading_wrapper">
+							<div class="prt_heading">
+								<h1>My Skills</h1>
+								<p>Expert in</p>
+							</div>
+						</div>
+					</div>					
+				</div>				
+				<div id="canvas">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center">
+							<div class="circle" id="circles-1"></div>
+							<h5>Adobe Creative Cloud</h5>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center">
+							<div class="circle" id="circles-2"></div>
+							<h5>FInal Cut Pro</h5>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center">
+							<div class="circle" id="circles-3"></div>
+							<h5>Html & Css</h5>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center">
+							<div class="circle" id="circles-4"></div>
+							<h5>Figma</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--Portfolio Wrapper Start-->
+		<div class="prt_portfolio_wrapper ">
+			<div class="prt_close_wrapper">
+				<img src="images/header/left_arrow.png" alt="Close" class="prt_close">
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="prt_heading_wrapper">
+							<div class="prt_heading">
+								<h1>portfolio</h1>
+								<p>MY work</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="portfolio-categories">
+							<div class="category-grid">
+								<a href="social-media.html" class="category-box">
+									<h3>Social Media Designs</h3>
+								</a>
+								<a href="motion-graphics.html" class="category-box">
+									<h3>Motion Graphics</h3>
+								</a>
+								<a href="ui-ux.html" class="category-box">
+									<h3>UI/UX Designs</h3>
+								</a>
+								<a href="print-designs.html" class="category-box">
+									<h3>Print Designs</h3>
+								</a>
+								<a href="ai-video.html" class="category-box">
+									<h3>AI Video Production & Design Posters</h3>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--Portfolio Wrapper End-->
+<div class="prt_footer_wrapper  ">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<p>Copyright © 2025 <a href="#">Portfolio</a>. All Rights Reserved</p>
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/YOUR-USERNAME" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Main js file Style--> 
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/plugin/countto/jquery.countTo.js"></script>
+<script type="text/javascript" src="js/plugin/countto/jquery.appear.js"></script>
+<script type="text/javascript" src="js/circles.js"></script>
+<script type="text/javascript" src="js/typed.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<!--Main js file End-->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".prt_services_slider_imgs img");
+    let currentIndex = 0;
+
+    function showNextImage() {
+        // remove "active" from current
+        images[currentIndex].classList.remove("active");
+
+        // move to next
+        currentIndex = (currentIndex + 1) % images.length;
+
+        // add "active" to new one
+        images[currentIndex].classList.add("active");
+    }
+
+    // change image every 3 seconds
+    setInterval(showNextImage, 3000);
+});
+</script>
+</body>
+</html>
